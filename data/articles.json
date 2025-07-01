@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "id": "teste-de-projeto-dois",
+      "title": "Teste de Projeto Dois",
+      "author": "Vladimir Dietrich",
+      "date": "2025-07-01",
+      "readingTime": 1,
+      "heroImage": {
+        "fileName": "teste-de-projeto-dois-image-0.png",
+        "githubPath": "images/teste-de-projeto-dois-image-0.png",
+        "githubUrl": "https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/teste-de-projeto-dois-image-0.png",
+        "altText": "",
+        "caption": ""
+      },
+      "lastUpdated": "2025-07-01T19:57:24.222Z"
+    },
+    {
+      "id": "teste-de-projeto-um",
+      "title": "Teste de Projeto Um",
+      "author": "Vladimir Dietrich",
+      "date": "2025-07-01",
+      "readingTime": 1,
+      "heroImage": {
+        "fileName": "teste-de-projeto-um-image-hero.png",
+        "githubPath": "images/teste-de-projeto-um-image-hero.png",
+        "githubUrl": "https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/teste-de-projeto-um-image-hero.png",
+        "altText": "",
+        "caption": ""
+      },
+      "lastUpdated": "2025-07-01T19:57:34.449Z"
+    }
+  ],
+  "lastUpdated": "2025-07-01T19:57:34.561Z"
+}
