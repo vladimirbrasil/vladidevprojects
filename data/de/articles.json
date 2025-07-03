@@ -2,7 +2,7 @@
   "articles": [
     {
       "id": "teste-de-projeto-um",
-      "title": "Projekt Eins Test",
+      "title": "Projekt Test Eins",
       "author": "Vladimir Dietrich",
       "date": "2025-07-01",
       "readingTime": 1,
@@ -13,8 +13,8 @@
         "altText": "",
         "caption": ""
       },
-      "lastUpdated": "2025-07-01T22:24:07.792Z"
+      "lastUpdated": "2025-07-03T19:06:02.142Z"
     }
   ],
-  "lastUpdated": "2025-07-01T22:24:16.497Z"
+  "lastUpdated": "2025-07-03T19:06:12.731Z"
 }
