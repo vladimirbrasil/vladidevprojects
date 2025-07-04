@@ -1,20 +1,20 @@
 {
   "articles": [
     {
-      "id": "teste-de-projeto-um",
-      "title": "Projekt Test Eins",
+      "id": "google-blogs",
+      "title": "Google Blogs",
       "author": "Vladimir Dietrich",
-      "date": "2025-07-01",
-      "readingTime": 1,
+      "date": "2025-06-14",
+      "readingTime": 3,
       "heroImage": {
-        "fileName": "teste-de-projeto-um-image-0.png",
-        "githubPath": "images/teste-de-projeto-um-image-0.png",
-        "githubUrl": "https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/teste-de-projeto-um-image-0.png",
+        "fileName": "google-blogs-image-0.png",
+        "githubPath": "images/google-blogs-image-0.png",
+        "githubUrl": "https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/google-blogs-image-0.png",
         "altText": "",
         "caption": ""
       },
-      "lastUpdated": "2025-07-03T19:06:02.142Z"
+      "lastUpdated": "2025-07-04T19:41:40.935Z"
     }
   ],
-  "lastUpdated": "2025-07-03T19:06:12.731Z"
+  "lastUpdated": "2025-07-04T19:42:10.871Z"
 }
