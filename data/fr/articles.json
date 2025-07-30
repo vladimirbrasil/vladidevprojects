@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "id": "modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic",
+      "title": "Modernisation et efficacité de l'échange d'informations criminelles entre la Justice fédérale et la Police fédérale",
+      "author": "Vladimir Dietrich",
+      "date": "2025-07-30",
+      "readingTime": 2,
+      "heroImage": {
+        "fileName": "modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic-image-0.png",
+        "githubPath": "images/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic-image-0.png",
+        "githubUrl": "https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic-image-0.png",
+        "altText": "",
+        "caption": ""
+      },
+      "lastUpdated": "2025-07-30T20:29:20.219Z"
+    },
+    {
       "id": "nao-incomode-o-funcionario",
       "title": "Ne pas déranger l'employé",
       "author": "Vladimir Dietrich",
@@ -46,5 +61,5 @@
       "lastUpdated": "2025-07-16T07:38:39.476Z"
     }
   ],
-  "lastUpdated": "2025-07-16T07:39:02.013Z"
+  "lastUpdated": "2025-07-30T20:29:38.571Z"
 }
