@@ -350,38 +350,38 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <p>I received a request for statistics in the work environment.</p>
 <p>An Excel spreadsheet with relevant data.</p>
 <p>How do we populate this Excel?</p>
-<p>The person who asked me for more statistics is an excellent data annotator: he even has his own spreadsheet, with beautiful annotations about everything he does.</p>
+<p>The person who asked me for more statistics is an excellent data annotator: he has his own spreadsheet, with beautiful annotations about everything he does.</p>
 <p>In his spreadsheet, the percentages measure various types of efficiency metrics, clearly coloring the computer screen.</p>
 <p>How to convince other employees to also be excellent data annotators for statistical purposes?</p>
 <p>In our conversation, I used the skeptical approach to data entry: even creating beautiful forms, who would guarantee that all employees will always fill in the relevant numbers to compile statistics for the entire sector?</p>
-<p>My skeptical view responded: no one guarantees. On the contrary, it is almost certain that someone will not fill in some data one day, or many employees, many data, especially with the passage of much time. After a few years, then, the chance of the additional effort not happening totally or partially is almost 100%, </p>
-<p>We were at this impasse: the statistics are very necessary, and need to be for the entire sector. We cannot be left with the doubt if someone did not fill in something, when disclosing the statistics of the entire sector.</p>
-<p>A parallel demand was the traceability of documents: we needed to quickly search documents, and we could also use the spreadsheets that generate statistics to search for document numbers. </p>
-<p>Here the problem of uncertain adherence becomes even greater: if there is doubt if a single employee did not fill in the spreadsheet, how can we say that we did not find the document if we are not sure if all employees fill in the spreadsheet, always?</p>
+<p>My skeptical view responded: no one guarantees it. On the contrary, it is almost certain that someone will not fill in some data one day, or many employees, many data, especially over a long period of time. After a few years, then, the chance of the additional effort not happening fully or partially is almost 100%, </p>
+<p>We were at this impasse: the statistics are sorely needed and need to be for the entire sector. We cannot be left with the doubt that someone did not fill in something when releasing the statistics for the entire sector.</p>
+<p>A parallel demand was for document traceability: we needed to quickly search for documents, and we could also use the spreadsheets that generate statistics to search for document numbers.</p>
+<p>Here the problem of uncertain adherence becomes even greater: if there is doubt that a single employee did not fill in the spreadsheet, how can we say that we did not find the document if we are not sure if all employees always fill in the spreadsheet?</p>
 <p>We let our brains heat up a bit, synapses working.</p>
-<p>A solution appeared that I consider not only elegant and functional, but also delicate, respectful, that does not bother anyone, really automated.</p>
-<p>This sector only has one certainty, in its entire production line: at the end, a report will be produced. </p>
-<p>How the report is made, whether or not parallel spreadsheets or forms are filled out, how long it takes, using which resources, none of that is certain. There is freedom in how to produce because it is an area that requires intelligence, analysis, in which each employee has their method to reach the final result.</p>
+<p>A solution appeared that I consider not only elegant and functional but also delicate, respectful, that does not bother anyone, truly automated.</p>
+<p>This sector only has one certainty, in its entire production line: at the end, a report will be produced.</p>
+<p>How the report is made, whether or not parallel spreadsheets or forms are filled out, how long it takes, using what resources, none of this is certain. There is freedom in how to produce because it is an area that requires intelligence, analysis, in which each employee has their own method to reach the final result.</p>
 <p>The final result, however, is certain: a report. In pdf.</p>
-<p>It may have been produced via Word, via Google Doc, via any way. But it will be, at the end of everything, a beautiful report in pdf.</p>
-<p>Ready then: let's acquire a machine of no more than a thousand dollars, with plenty of RAM, a good NVIDIA video card and a good CPU to run a local artificial intelligence - just to keep the reports off the web. Yes, it would be easy to implement, in this case on any simple machine, a query to an artificial intelligence via API. But we opted for local artificial intelligence.</p>
-<p>A python script monitors the network folder that receives all the ready PDF reports from the sector.</p>
-<p>When a new report appears, the artificial intelligence extracts the fields we need to compile statistics. </p>
-<p>As the way of writing reports varies quite a bit, I chose not to use regex, nor try to.</p>
-<p>I confess that it would be possible to adapt a good regex to the variation of ways of writing reports, but in fact I wanted another advantage; scalability in two aspects:</p>
-<li>Not needing to adapt, or needing to adapt less the code to each new incoming employee. This allows the code to last for years or decades, without needing major adjustments.</li>
-<li>I want the team of employees to be able to add new statistics without depending on a super specialist in regex, usually just adding the new question in the query to the artificial intelligence which, then, adds the new information to a new column in the spreadsheet. Freedom to innovate quickly! ☀️</li>
-<p>The solution is more powerful than we imagined when encountering the initial problem. With this solution, even a one-to-many relationship was implemented for the first time in the sector. As the artificial intelligence returns an array (a set, to remove duplicates) when there are many things of the same type to answer, we are now compiling statistics and ways to quickly find items that happen in indefinite quantities, for each report.</p>
+<p>It may have been produced via Word, via Google Doc, via any means. But it will be, at the end of everything, a beautiful report in pdf.</p>
+<p>Ready then: let's acquire a machine for no more than a thousand dollars, with plenty of RAM, a good NVIDIA video card, and a good CPU to run artificial intelligence locally - just to keep the reports off the web. Yes, it would be easy to implement, in this case on any simple machine, a query to artificial intelligence via API. But we opted for local artificial intelligence.</p>
+<p>A python script monitors the network folder that receives all the sector's finished PDF reports.</p>
+<p>When a new report appears, the artificial intelligence extracts the fields we need to compile statistics.</p>
+<p>Since the way of writing reports varies greatly, I chose not to use regex, nor try to.</p>
+<p>I confess that it would be possible to adapt a good regex to the variation of ways of writing reports, but in fact, I wanted another advantage; scalability in two aspects:</p>
+<li>Not having to adapt, or needing to adapt less, the code for each new incoming employee. This allows the code to last for years or decades without needing major adjustments.</li>
+<li>I want the team of employees to be able to add new statistics without depending on a super regex specialist, usually just needing to add the new question in the query to the artificial intelligence, which then adds the new information to a new column in the spreadsheet. Freedom to innovate quickly! ☀️</li>
+<p>The solution is more powerful than we imagined when encountering the initial problem. With this solution, even a one-to-many relationship was implemented for the first time in the sector. Since artificial intelligence returns an array (a set, to remove duplicates) when there are many things of the same type to answer, we are now compiling statistics and ways to quickly find items that occur in indefinite quantities for each report.</p>
 <p>In this case, we created a new tab in the spreadsheet and added all the items from the array returned by the artificial intelligence next to the unique value that determines which row of the main table these items belong to.</p>
-<p>One of these items is highly sought after by those who request information from the sector, so this innovation will speed up the process of the entire sector and those who consult the sector.</p>
+<p>One of these items is highly sought after by those who request information from the sector, so this innovation will speed up the process for the entire sector and those who consult the sector.</p>
 <p>Of course, we could use an SQL database, or another type; we could use Google spreadsheets, various options.</p>
-<p>I preferred to keep what the employees are used to seeing in their daily lives.</p>
-<p>This type of solution makes me so happy, do you know why? </p>
-<p>Because the employees will not even notice the solution already happening.</p>
-<p>Their lives will not change in anything.</p>
-<p>If they want to change, one day, I know there is a human resources sector, or they themselves can meet and change.</p>
-<p>But it is not me, an admirer of technologies, who will ask an employee or an entire sector to change.</p>
-<p>If I can be as discreet as a ladybug that lands in the place, nobody sees, light, but brings a lot of luck - or statistics and traceability - I want to be the ladybug that nobody notices!</p>
+<p>I preferred to keep what employees are used to seeing on a daily basis.</p>
+<p>This type of solution makes me so happy, you know why?</p>
+<p>Because employees won't even notice the solution already happening.</p>
+<p>Their lives will not change in any way.</p>
+<p>If they want to change, one day, I know there is a human resources sector, or they can get together and change themselves.</p>
+<p>But it's not me, an admirer of technologies, who will ask an employee or an entire sector to change.</p>
+<p>If I can be as discreet as a ladybug that lands in a place, no one sees, light, but brings good luck - or statistics and traceability - I want to be the ladybug that no one notices!</p>
 <p>Great day to all! ☀️☀️☀️☀️</p>
         </div>
 

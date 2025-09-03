@@ -350,38 +350,38 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <p>Ich habe eine Anfrage für Statistiken am Arbeitsplatz erhalten.</p>
 <p>Eine Excel-Tabelle mit relevanten Daten.</p>
 <p>Wie füllen wir diese Excel-Tabelle?</p>
-<p>Derjenige, der mich nach weiteren Statistiken gefragt hat, ist ein exzellenter Datenerfasser: Er hat selbst eine eigene Tabelle mit schönen Notizen zu allem, was er tut.</p>
+<p>Derjenige, der mich nach weiteren Statistiken gefragt hat, ist ein ausgezeichneter Datenerfasser: Er hat selbst eine Tabelle mit wunderschönen Notizen über alles, was er tut.</p>
 <p>In seiner Tabelle messen die Prozentsätze verschiedene Arten von Effizienzmetriken und färben den Computerbildschirm klar ein.</p>
-<p>Wie können wir andere Mitarbeiter davon überzeugen, ebenfalls hervorragende Datenerfasser für statistische Zwecke zu sein?</p>
-<p>In unserem Gespräch habe ich den skeptischen Ansatz zur Dateneingabe verwendet: Selbst wenn wir schöne Formulare erstellen, wer würde garantieren, dass alle Mitarbeiter immer die relevanten Zahlen ausfüllen, um eine Statistik für den gesamten Sektor zu erstellen?</p>
-<p>Meine skeptische Sichtweise antwortete: Niemand garantiert das. Im Gegenteil, es ist fast sicher, dass jemand irgendwann ein Datum nicht ausfüllen wird, oder viele Mitarbeiter viele Daten, insbesondere im Laufe der Zeit. Nach einigen Jahren ist die Wahrscheinlichkeit, dass die zusätzliche Anstrengung nicht vollständig oder teilweise stattfindet, fast 100 %.</p>
-<p>Wir befanden uns in dieser Sackgasse: Die Statistik ist sehr wichtig und muss für den gesamten Sektor gelten. Wir dürfen nicht im Zweifel sein, ob jemand etwas nicht ausgefüllt hat, wenn wir die Statistik des gesamten Sektors veröffentlichen.</p>
-<p>Eine parallele Anforderung war die Rückverfolgbarkeit von Dokumenten: Wir mussten Dokumente schnell durchsuchen können und könnten die Tabellen, die Statistiken generieren, auch verwenden, um nach Dokumentennummern zu suchen.</p>
-<p>Hier wird das Problem der unsicheren Teilnahme noch größer: Wenn Zweifel bestehen, ob ein einzelner Mitarbeiter die Tabelle nicht ausgefüllt hat, wie können wir dann sagen, dass wir das Dokument nicht gefunden haben, wenn wir nicht sicher sind, ob alle Mitarbeiter die Tabelle immer ausfüllen?</p>
-<p>Wir ließen unsere Gehirne ein wenig aufheizen, Synapsen arbeiteten.</p>
-<p>Es tauchte eine Lösung auf, die ich nicht nur für elegant und funktional, sondern auch für delikat, respektvoll und wirklich automatisiert halte, die niemanden stört.</p>
-<p>Dieser Sektor hat nur eine Gewissheit in seiner gesamten Produktionslinie: Am Ende wird ein Gutachten erstellt.</p>
-<p>Wie das Gutachten erstellt wird, ob parallele Tabellen oder Formulare ausgefüllt werden oder nicht, in welcher Zeit, mit welchen Ressourcen, all das ist nicht sicher. Es gibt eine Freiheit bei der Produktion, da es sich um einen Bereich handelt, der Intelligenz und Analyse erfordert, in dem jeder Mitarbeiter seine eigene Methode hat, um zum Endergebnis zu gelangen.</p>
-<p>Das Endergebnis ist jedoch sicher: ein Gutachten. Als PDF.</p>
-<p>Es kann über Word, über Google Doc oder auf irgendeine andere Weise erstellt worden sein. Aber am Ende wird es ein schönes Gutachten im PDF-Format sein.</p>
-<p>Also fertig: Wir werden eine Maschine für nicht mehr als tausend Dollar anschaffen, mit viel RAM, einer guten NVIDIA-Grafikkarte und einer guten CPU, um lokal eine künstliche Intelligenz zu betreiben - nur um die Gutachten aus dem Web herauszuhalten. Ja, es wäre einfach, in diesem Fall auf jeder einfachen Maschine eine Abfrage einer künstlichen Intelligenz über eine API zu implementieren. Aber wir haben uns für die lokale künstliche Intelligenz entschieden.</p>
-<p>Ein Python-Skript überwacht den Ordner im Netzwerk, der alle fertigen PDF-Gutachten des Sektors empfängt.</p>
-<p>Wenn ein neues Gutachten erscheint, extrahiert die künstliche Intelligenz die Felder, die wir benötigen, um Statistiken zu erstellen.</p>
-<p>Da die Art und Weise, wie Gutachten verfasst werden, stark variiert, habe ich mich entschieden, keine Regex zu verwenden und es auch nicht zu versuchen.</p>
-<p>Ich gestehe, dass es möglich wäre, eine gute Regex an die Variation der Arten des Schreibens von Gutachten anzupassen, aber ich wollte eigentlich einen anderen Vorteil: die Skalierbarkeit in zwei Aspekten:</p>
-<li>Ich muss den Code nicht an jeden neuen Mitarbeiter anpassen oder weniger anpassen. Dies ermöglicht es dem Code, jahre- oder jahrzehntelang zu halten, ohne dass große Anpassungen erforderlich sind.</li>
-<li>Ich möchte, dass das Mitarbeiterteam neue Statistiken hinzufügen kann, ohne auf einen Superexperten für Regex angewiesen zu sein, wobei es normalerweise ausreicht, die neue Frage in die Abfrage an die künstliche Intelligenz aufzunehmen, die dann die neue Information zu einer neuen Spalte in der Tabelle hinzufügt. Freiheit, schnell zu innovieren! ☀️</li>
-<p>Die Lösung ist leistungsfähiger, als wir uns beim Auftreten des anfänglichen Problems vorgestellt hatten. Mit dieser Lösung wurde sogar eine Eins-zu-viele-Beziehung zum ersten Mal im Sektor implementiert. Da die künstliche Intelligenz ein Array (ein Set, um Duplikate zu entfernen) zurückgibt, wenn es viele Dinge vom gleichen Typ gibt, um zu antworten, erstellen wir jetzt Statistiken und Möglichkeiten, um schnell Elemente zu finden, die in unbestimmten Mengen für jedes Gutachten vorkommen.</p>
-<p>In diesem Fall haben wir ein neues Tabellenblatt erstellt und alle Elemente des von der künstlichen Intelligenz zurückgegebenen Arrays neben dem eindeutigen Wert hinzugefügt, der bestimmt, zu welcher Zeile der Haupttabelle diese Elemente gehören.</p>
-<p>Eines dieser Elemente wird von denjenigen, die Informationen beim Sektor anfordern, sehr gesucht, daher wird diese Innovation den Prozess des gesamten Sektors und derjenigen, die den Sektor konsultieren, beschleunigen.</p>
-<p>Klar, wir könnten eine SQL-Datenbank oder einen anderen Typ verwenden; wir könnten Google-Tabellen, verschiedene Optionen verwenden.</p>
+<p>Wie können wir andere Mitarbeiter davon überzeugen, auch hervorragende Datenerfasser für statistische Zwecke zu sein?</p>
+<p>In unserem Gespräch habe ich den skeptischen Ansatz zur Dateneingabe verwendet: Selbst wenn wir wunderschöne Formulare erstellen, wer garantiert, dass alle Mitarbeiter immer die relevanten Zahlen eingeben, um eine Statistik für den gesamten Sektor zu erstellen?</p>
+<p>Meine skeptische Sichtweise antwortete: Niemand garantiert das. Im Gegenteil, es ist fast sicher, dass jemand irgendwann keine Daten eingibt, oder viele Mitarbeiter, viele Daten, insbesondere im Laufe der Zeit. Nach einigen Jahren ist die Wahrscheinlichkeit, dass die zusätzliche Anstrengung nicht ganz oder teilweise erfolgt, fast 100 %.</p>
+<p>Wir befanden uns in dieser Sackgasse: Die Statistik fehlt sehr und muss für den gesamten Sektor gelten. Wir können nicht im Zweifel darüber sein, ob jemand etwas nicht ausgefüllt hat, wenn wir die Statistik des gesamten Sektors veröffentlichen.</p>
+<p>Eine parallele Anforderung war die Rückverfolgbarkeit von Dokumenten: Wir mussten Dokumente schnell suchen und konnten die Tabellen, die Statistiken erstellen, auch verwenden, um nach Dokumentennummern zu suchen.</p>
+<p>Hier wird das Problem der unsicheren Beteiligung noch größer: Wenn Zweifel bestehen, ob ein einziger Mitarbeiter die Tabelle nicht ausgefüllt hat, wie können wir dann sagen, dass wir das Dokument nicht gefunden haben, wenn wir nicht sicher sind, ob alle Mitarbeiter die Tabelle immer ausfüllen?</p>
+<p>Wir ließen unsere Gehirne etwas heiß laufen, Synapsen arbeiteten.</p>
+<p>Es tauchte eine Lösung auf, die ich nicht nur für elegant und funktional halte, sondern auch für delikat, respektvoll und wirklich automatisiert, die niemanden stört.</p>
+<p>Dieser Sektor hat nur eine Gewissheit in seiner gesamten Produktionslinie: Am Ende wird ein Bericht erstellt.</p>
+<p>Wie der Bericht erstellt wird, ob parallele Tabellen oder Formulare ausgefüllt werden oder nicht, in welcher Zeit, mit welchen Ressourcen, all dies ist nicht sicher. Es gibt eine Freiheit bei der Produktion, da es sich um einen Bereich handelt, der Intelligenz und Analyse erfordert, in dem jeder Mitarbeiter seine eigene Methode hat, um zum Endergebnis zu gelangen.</p>
+<p>Das Endergebnis ist jedoch sicher: ein Bericht. Im PDF-Format.</p>
+<p>Er könnte über Word, über Google Doc oder auf andere Weise erstellt worden sein. Aber am Ende wird es ein schöner Bericht im PDF-Format sein.</p>
+<p>Also gut: Wir werden eine Maschine für nicht mehr als tausend Dollar mit viel RAM, einer guten NVIDIA-Grafikkarte und einer guten CPU kaufen, um lokal eine künstliche Intelligenz zu betreiben – nur um die Berichte aus dem Internet zu halten. Ja, es wäre einfach, in diesem Fall auf jeder einfachen Maschine eine Anfrage an eine künstliche Intelligenz über eine API zu implementieren. Aber wir haben uns für die lokale künstliche Intelligenz entschieden.</p>
+<p>Ein Python-Skript überwacht den Netzwerkordner, der alle fertigen PDF-Berichte des Sektors empfängt.</p>
+<p>Wenn ein neuer Bericht erscheint, extrahiert die künstliche Intelligenz die Felder, die wir zum Erstellen von Statistiken benötigen.</p>
+<p>Da die Art und Weise, Berichte zu verfassen, stark variiert, habe ich mich entschieden, keine Regex zu verwenden und es auch nicht zu versuchen.</p>
+<p>Ich gestehe, dass es möglich wäre, einen guten Regex an die Variationen der Berichtsweise anzupassen, aber eigentlich wollte ich einen anderen Vorteil; die Skalierbarkeit in zwei Aspekten:</p>
+<li>Es ist nicht erforderlich, den Code an jeden neuen Mitarbeiter anzupassen oder ihn weniger anpassen zu müssen. Dadurch kann der Code jahre- oder jahrzehntelang halten, ohne dass größere Anpassungen erforderlich sind.</li>
+<li>Ich möchte, dass das Mitarbeiterteam neue Statistiken hinzufügen kann, ohne auf einen Superexperten für Regex angewiesen zu sein, wobei es normalerweise ausreicht, die neue Frage zur Abfrage der künstlichen Intelligenz hinzuzufügen, die dann die neue Information zu einer neuen Spalte in der Tabelle hinzufügt. Freiheit, schnell zu innovieren! ☀️</li>
+<p>Die Lösung ist leistungsfähiger, als wir uns bei der ersten Begegnung mit dem Problem vorgestellt hatten. Mit dieser Lösung wurde im Sektor sogar zum ersten Mal eine Eins-zu-viele-Beziehung implementiert. Da die künstliche Intelligenz ein Array (ein Set, um Duplikate zu entfernen) zurückgibt, wenn es viele Dinge vom gleichen Typ gibt, die beantwortet werden müssen, erstellen wir jetzt Statistiken und Möglichkeiten, schnell Elemente zu finden, die in unbestimmten Mengen vorkommen, für jeden Bericht.</p>
+<p>In diesem Fall haben wir eine neue Registerkarte in der Tabelle erstellt und alle Elemente des von der künstlichen Intelligenz zurückgegebenen Arrays neben dem eindeutigen Wert hinzugefügt, der bestimmt, zu welcher Zeile der Haupttabelle diese Elemente gehören.</p>
+<p>Eines dieser Elemente wird von denjenigen, die Informationen vom Sektor anfordern, sehr gesucht, sodass diese Innovation den Prozess des gesamten Sektors und derjenigen, die den Sektor konsultieren, beschleunigen wird.</p>
+<p>Klar, wir könnten eine SQL-Datenbank oder einen anderen Typ verwenden; wir könnten Google-Tabellen verwenden, verschiedene Optionen.</p>
 <p>Ich habe es vorgezogen, das beizubehalten, was die Mitarbeiter im Alltag gewohnt sind.</p>
-<p>Diese Art von Lösung macht mich so glücklich, wissen Sie warum?</p>
-<p>Weil die Mitarbeiter die Lösung nicht einmal bemerken werden, wenn sie bereits stattfindet.</p>
-<p>Sie werden ihr Leben nicht im Geringsten verändern.</p>
+<p>Diese Art von Lösung macht mich so zufrieden, wissen Sie warum?</p>
+<p>Weil die Mitarbeiter die Lösung nicht einmal bemerken werden.</p>
+<p>Sie werden ihr Leben in keiner Weise verändern.</p>
 <p>Wenn sie sich eines Tages ändern wollen, weiß ich, dass es eine Personalabteilung gibt, oder sie können sich selbst treffen und sich ändern.</p>
-<p>Aber ich bin es nicht, ein Bewunderer von Technologien, der einen Mitarbeiter oder einen ganzen Sektor bitten wird, sich zu ändern.</p>
-<p>Wenn ich so diskret sein kann wie ein Marienkäfer, der sich auf einen Ort setzt, niemand sieht ihn, leicht, aber er bringt viel Glück - oder Statistiken und Rückverfolgbarkeit - möchte ich der Marienkäfer sein, den niemand bemerkt!</p>
+<p>Aber ich bin es nicht, ein Bewunderer von Technologien, der einen Mitarbeiter oder einen ganzen Sektor auffordern wird, sich zu ändern.</p>
+<p>Wenn ich so diskret sein kann wie ein Marienkäfer, der sich auf einen Ort setzt, niemand sieht es, leicht, aber es bringt viel Glück - oder Statistiken und Rückverfolgbarkeit - möchte ich der Marienkäfer sein, den niemand bemerkt!</p>
 <p>Einen schönen Tag euch allen! ☀️☀️☀️☀️</p>
         </div>
 
