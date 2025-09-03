@@ -2,7 +2,7 @@
   "articles": [
     {
       "id": "nao-incomode-o-funcionario",
-      "title": "Bitte den Mitarbeiter nicht stören",
+      "title": "Bitte stören Sie den Mitarbeiter nicht",
       "author": "Vladimir Dietrich",
       "date": "2025-07-08",
       "readingTime": 4,
@@ -13,7 +13,7 @@
         "altText": "",
         "caption": ""
       },
-      "lastUpdated": "2025-09-02T20:18:11.378Z"
+      "lastUpdated": "2025-09-03T14:50:14.594Z"
     },
     {
       "id": "google-blogs",
@@ -28,11 +28,11 @@
         "altText": "",
         "caption": ""
       },
-      "lastUpdated": "2025-09-02T20:19:13.085Z"
+      "lastUpdated": "2025-09-03T14:51:14.862Z"
     },
     {
       "id": "desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid",
-      "title": "Entwicklung eines von Branchenexperten anerkannten Multi-Market-Finanzindikatorsystems",
+      "title": "Entwicklung eines Multi-Market-Finanzindikatorensystems, das von Branchenexperten anerkannt wird",
       "author": "Vladimir Dietrich",
       "date": "2009-02-14",
       "readingTime": 2,
@@ -43,11 +43,11 @@
         "altText": "",
         "caption": ""
       },
-      "lastUpdated": "2025-09-02T20:17:41.159Z"
+      "lastUpdated": "2025-09-03T14:49:45.761Z"
     },
     {
       "id": "modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic",
-      "title": "Modernisierung und Effizienz beim Austausch von strafrechtlichen Informationen zwischen der Bundesjustiz und der Bundespolizei",
+      "title": "Modernisierung und Effizienz beim Austausch von kriminellen Informationen zwischen der Bundesjustiz und der Bundespolizei",
       "author": "Vladimir Dietrich",
       "date": "2007-08-21",
       "readingTime": 2,
@@ -58,8 +58,23 @@
         "altText": "",
         "caption": ""
       },
-      "lastUpdated": "2025-09-02T20:17:09.205Z"
+      "lastUpdated": "2025-09-03T14:49:14.619Z"
+    },
+    {
+      "id": "politica-de-uso-e-reproducao-de-conteudo",
+      "title": "Richtlinien für die Nutzung und Vervielfältigung von Inhalten",
+      "author": "Vladimir Dietrich",
+      "date": "1990-01-01",
+      "readingTime": 2,
+      "heroImage": {
+        "fileName": "politica-de-uso-e-reproducao-image-0.jpg",
+        "githubPath": "images/politica-de-uso-e-reproducao-image-0.jpg",
+        "githubUrl": "https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/politica-de-uso-e-reproducao-image-0.jpg",
+        "altText": "",
+        "caption": ""
+      },
+      "lastUpdated": "2025-09-03T14:48:43.097Z"
     }
   ],
-  "lastUpdated": "2025-09-02T20:19:46.845Z"
+  "lastUpdated": "2025-09-03T14:51:51.548Z"
 }
