@@ -14,6 +14,7 @@
   <meta property="og:image:alt" content="Desarrollo de un Sistema de Indicadores Financieros Multimercado Reconocido por Especialistas del Sector">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://projects.vladi.dev/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html">
+  <link rel="alternate" type="application/rss+xml" title="Proyectos de Vladimir Dietrich" href="https://projects.vladi.dev/es/feed.xml" />
   <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; line-height: 1.58; color: rgba(41, 41, 41, 1); background-color: #fff; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -313,14 +314,89 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
   }
 }
 
+/* ======================================================================== */
+/* === Newsletter Subscription Form === */
+/* ======================================================================== */
+.newsletter-section {
+  background: rgba(26, 137, 23, 0.06);
+  border: 1px solid rgba(26, 137, 23, 0.15);
+  border-radius: 12px;
+  padding: 32px;
+  margin: 32px 0;
+  text-align: center;
+}
+.newsletter-section h3 {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(41, 41, 41, 1);
+  margin-bottom: 16px;
+}
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.newsletter-form input[type="email"] {
+  padding: 10px 16px;
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-width: 220px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.newsletter-form input[type="email"]:focus {
+  border-color: rgba(26, 137, 23, 0.5);
+}
+.newsletter-form select {
+  padding: 10px 12px;
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+}
+.newsletter-form button {
+  padding: 10px 24px;
+  background: rgba(26, 137, 23, 1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.newsletter-form button:hover {
+  background: rgba(21, 117, 19, 1);
+}
+.newsletter-form button:disabled {
+  background: rgba(117, 117, 117, 0.5);
+  cursor: not-allowed;
+}
+.newsletter-message {
+  margin-top: 12px;
+  font-size: 14px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.newsletter-message.success { color: rgba(26, 137, 23, 1); }
+.newsletter-message.error { color: #d32f2f; }
+
 </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Desarrollo de un Sistema de Indicadores Financieros Multimercado Reconocido por Especialistas del Sector","author":{"@type":"Person","name":"Vladimir Dietrich"},"datePublished":"2009-02-14","image":"https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/development-of-a-multi-market-financial-indicator-system-recognized-by-industry-image-0.jpg","description":" "}</script>
 </head>
 <body>
   
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0&appId=1284673459606715&autoLogAppEvents=1" nonce="a1b2c3d4"></script>
-          
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0&appId=1284673459606715&autoLogAppEvents=1" nonce="a1b2c3d4"></script>
+    
   <header class="header">
    <div class="header-content">
      <a href="/es/index.html" class="logo">Vladimir Dietrich</a>
@@ -350,6 +426,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         <div class="language-switcher"><a href="/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html">Português</a><span>|</span><a href="/en/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html">English</a><span>|</span><a href="/fr/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html">Français</a><span>|</span><a href="/de/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html">Deutsch</a><span>|</span><strong>Español</strong></div>
 
         <div class="article-content">
+          
           <p> </p>
 <p></p>
 <p>Alrededor de 2008, el Dr. Alexander Elder, un trader de renombre mundial, desafió a la comunidad internacional de inversiones a adaptar su indicador New Highs-New Lows (NH-NL) — una herramienta esencial para evaluar la salud del mercado de los EE. UU. — a mercados no estadounidenses. Esto nunca se había hecho antes y presentaba un desafío técnico significativo: crear un sistema para obtener, procesar y calcular el indicador para ecosistemas financieros totalmente diferentes.</p>
@@ -360,26 +437,86 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <p>Este proyecto estableció una nueva y valiosa herramienta para la comunidad de trading internacional y obtuvo reconocimiento y validación del más alto nivel de especialistas del sector, que pasaron a consumir los gráficos y establecer análisis.</p>
 <figure><img src="https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/development-of-a-multi-market-financial-indicator-system-recognized-by-industry-image-2.png" alt="Ejemplo de análisis de especialista usando uno de los muchos gráficos NH-NL proporcionados por Vladimir Dietrichkeit fuera de los EE. UU., con base en el gráfico de Australia (Elder &amp; Lovvorn, 2012, p. 57)." /><figcaption>Ejemplo de análisis de especialista usando uno de los muchos gráficos NH-NL proporcionados por Vladimir Dietrichkeit fuera de los EE. UU., con base en el gráfico de Australia (Elder &amp; Lovvorn, 2012, p. 57).</figcaption></figure>
 <p>En este proyecto, me convertí en la primera persona en desarrollar e implementar con éxito el indicador NH-NL del Dr. Alexander Elder para mercados fuera de los EE. UU.</p>
+        
         </div>
- 
-            <div class="comments-section" style="margin-top: 80px;">
-              <div class="fb-comments" data-href="https://projects.vladi.dev/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html" data-width="100%" data-numposts="5"></div>
-            </div>
-          
+
+        
+      <div class="comments-section" style="margin-top: 80px;">
+        <div class="fb-comments" data-href="https://projects.vladi.dev/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html" data-width="100%" data-numposts="5"></div>
+      </div>
+     
+
       </div>
     </div>
   </main>
   <footer class="footer">
     <div class="container">
+        
+    <div class="newsletter-section">
+      <h3>Recibe nuevos artículos por email</h3>
+      <form class="newsletter-form" id="newsletter-form" onsubmit="return false;">
+        <input type="email" id="newsletter-email" placeholder="Tu email" required>
+        <select id="newsletter-lang"><option value="pt">Português</option><option value="en">English</option><option value="es" selected>Español</option><option value="fr">Français</option><option value="de">Deutsch</option></select>
+        <button type="button" id="newsletter-btn" onclick="submitNewsletter()">Suscribirse</button>
+      </form>
+      <div class="newsletter-message" id="newsletter-message"></div>
+    </div>
+    <script>
+      function submitNewsletter() {
+        var email = document.getElementById('newsletter-email').value.trim();
+        var lang = document.getElementById('newsletter-lang').value;
+        var btn = document.getElementById('newsletter-btn');
+        var msg = document.getElementById('newsletter-message');
+        if (!email) return;
+        btn.disabled = true;
+        msg.textContent = '';
+        msg.className = 'newsletter-message';
+        var WEBAPP_URL = 'null';
+        fetch(WEBAPP_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, lang: lang, blogId: 'vladidevprojects' }),
+          mode: 'no-cors'
+        }).then(function(r) {
+          if (r.type === 'opaque') {
+            msg.textContent = "¡Suscripción exitosa!";
+            msg.className = 'newsletter-message success';
+            document.getElementById('newsletter-email').value = '';
+          } else {
+            return r.json();
+          }
+        }).then(function(data) {
+          if (!data) return;
+          if (data.success) {
+            msg.textContent = "¡Suscripción exitosa!";
+            msg.className = 'newsletter-message success';
+            document.getElementById('newsletter-email').value = '';
+          } else if (data.error === 'already_subscribed') {
+            msg.textContent = "Este email ya está suscrito.";
+            msg.className = 'newsletter-message error';
+          } else {
+            msg.textContent = "Error al suscribirse. Inténtalo de nuevo.";
+            msg.className = 'newsletter-message error';
+          }
+        }).catch(function() {
+          msg.textContent = "¡Suscripción exitosa!";
+          msg.className = 'newsletter-message success';
+          document.getElementById('newsletter-email').value = '';
+        }).finally(function() {
+          btn.disabled = false;
+        });
+      }
+    </script>
+  
         <div style="text-align: center; line-height: 1.6;">
-            <p>© 2025 Vladimir Dietrich</p>
+            <p>© 2026 Vladimir Dietrich</p>
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="Licença Creative Commons Atribuição 4.0 Internacional">
                 <img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
             </a>
             <p style="font-size: 0.9em; color: #666;">
-                Esta obra está licenciada sob <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+                Esta obra está bajo una licencia de <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
                 <br>
-                <a href="/es/articles/politica-de-uso-e-reproducao-de-conteudo.html">Aprenda cómo republicar este contenido</a>.
+                <a href="/es/articles/politica-de-uso-e-reproducao-de-conteudo.html">Aprenda cómo republicar este contenido</a>
             </p>
         </div>
     </div>
