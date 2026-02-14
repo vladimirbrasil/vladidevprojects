@@ -457,6 +457,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
           
           
           
+          
           <p> </p>
 <p> </p>
 <p>¡Hola! Me alegra mucho tu interés en mi trabajo. Todo el contenido de este blog se crea con el objetivo de compartir conocimiento y ayudar a la comunidad.</p>
@@ -480,6 +481,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <h2>¿Dudas?</h2>
 <p>Si tienes alguna pregunta sobre el uso del contenido o quieres proponer algún tipo de asociación, por favor, ponte en <a href="mailto:hello@vladi.dev" target="_blank" rel="noopener noreferrer">contacto</a>: hello@vladi.dev.</p>
 <p>¡Agradezco mucho por ayudar a compartir este conocimiento!</p>
+        
         
         
         
@@ -520,6 +522,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         var WEBAPP_URL = 'null';
         fetch(WEBAPP_URL, {
           method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({ email: email, lang: lang, blogId: 'vladidevprojects' })
         }).then(function(r) {
           return r.json();

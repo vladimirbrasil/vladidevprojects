@@ -457,6 +457,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
           
           
           
+          
           <p>   </p>
 <p></p>
 <p>Em 2006 identifiquei uma ineficiência crítica no intercâmbio de informações criminais entre a Polícia Federal e o sistema de Justiça Federal no Brasil. Anteriormente, a comunicação dependia da troca manual e lenta de documentos oficiais (ofícios). Este processo resultava em atrasos significativos para magistrados que necessitavam de antecedentes criminais para decisões urgentes e levava a uma baixa qualidade dos dados, uma vez que as informações judiciais eram frequentemente resumidas de forma incorreta ou perdidas durante a transferência para a base de dados da polícia, o Sistema Nacional de Informações Criminais (SINIC).</p>
@@ -465,6 +466,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <p>O resultado do projeto foi a celebração de um Acordo de Cooperação Técnica em agosto de 2007 entre o Superior Tribunal de Justiça, o Conselho da Justiça Federal, os Tribunais Regionais Federais e o Departamento de Polícia Federal (disponível para <a href="https://www.cjf.jus.br/cjf/sessoes-do-cjf/acordos-e-convenios/2007/482_Acordo_Policia_Federal.pdf/at_download/file" target="_blank" rel="noopener noreferrer">download</a>). O acordo formalizou o intercâmbio eletrônico de informações para a prevenção da criminalidade no Brasil, eliminando para os interessados a necessidade do envio de ofícios para a comunicação entre os dois órgãos sobre informações criminais.</p>
 <figure><img src="https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic-image-1.jpg" alt="" /></figure>
 
+        
         
         
         
@@ -505,6 +507,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         var WEBAPP_URL = 'null';
         fetch(WEBAPP_URL, {
           method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({ email: email, lang: lang, blogId: 'vladidevprojects' })
         }).then(function(r) {
           return r.json();

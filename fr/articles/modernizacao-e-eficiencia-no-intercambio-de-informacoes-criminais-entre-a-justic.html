@@ -457,6 +457,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
           
           
           
+          
           <p> </p>
 <p></p>
 <p>En 2006, j'ai identifié une inefficacité critique dans l'échange d'informations criminelles entre la Police fédérale et le système de Justice fédérale au Brésil. Auparavant, la communication dépendait de l'échange manuel et lent de documents officiels (lettres officielles). Ce processus entraînait des retards importants pour les magistrats qui avaient besoin d'antécédents criminels pour des décisions urgentes et conduisait à une faible qualité des données, car les informations judiciaires étaient souvent résumées de manière incorrecte ou perdues lors du transfert vers la base de données de la police, le Système national d'informations criminelles (SINIC).</p>
@@ -464,6 +465,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <p>L'initiative a permis de supprimer avec succès les goulets d'étranglement de l'information, d'améliorer considérablement la qualité et l'exhaustivité des données criminelles nationales et de permettre l'enregistrement des procédures pénales qui ne provenaient pas du système de police, comblant ainsi une lacune d'information importante.</p>
 <p>Le résultat du projet a été la conclusion d'un Accord de Coopération Technique en août 2007 entre la Cour Supérieure de Justice, le Conseil de la Justice Fédérale, les Tribunaux Régionaux Fédéraux et le Département de la Police Fédérale (disponible en <a href="https://www.cjf.jus.br/cjf/sessoes-do-cjf/acordos-e-convenios/2007/482_Acordo_Policia_Federal.pdf/at_download/file" target="_blank" rel="noopener noreferrer">téléchargement</a>). L'accord a officialisé l'échange électronique d'informations pour la prévention de la criminalité au Brésil, éliminant pour les parties intéressées la nécessité d'envoyer des lettres officielles pour la communication entre les deux organes sur les informations criminelles.</p>
 <figure><img src="https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic-image-1.jpg" alt="" /></figure>
+        
         
         
         
@@ -504,6 +506,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         var WEBAPP_URL = 'null';
         fetch(WEBAPP_URL, {
           method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({ email: email, lang: lang, blogId: 'vladidevprojects' })
         }).then(function(r) {
           return r.json();

@@ -457,6 +457,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
           
           
           
+          
           <p>   </p>
 <p></p>
 <p>Imagine um Google Doc. Pronto: temos mais um entrada para um blog. “Google Blogs”!</p>
@@ -500,6 +501,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         
         
         
+        
         </div>
 
         
@@ -536,6 +538,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         var WEBAPP_URL = 'null';
         fetch(WEBAPP_URL, {
           method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({ email: email, lang: lang, blogId: 'vladidevprojects' })
         }).then(function(r) {
           return r.json();
