@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projekte von Vladimir Dietrich</title>
+    <link>https://projects.vladi.dev/de/</link>
+    <description>Projekte von Vladimir Dietrich - Vladimir Dietrich</description>
+    <language>de</language>
+    <lastBuildDate>Sat, 14 Feb 2026 02:54:02 GMT</lastBuildDate>
+    <atom:link href="https://projects.vladi.dev/de/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Den Mitarbeiter nicht stören</title>
+      <link>https://projects.vladi.dev/de/articles/nao-incomode-o-funcionario.html</link>
+      <guid isPermaLink="true">https://projects.vladi.dev/de/articles/nao-incomode-o-funcionario.html</guid>
+      <pubDate>Tue, 08 Jul 2025 12:00:00 GMT</pubDate>
+      <dc:creator>Vladimir Dietrich</dc:creator>
+      <description>&lt;img src=&quot;https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/nao-incomode-o-funcionario-image-0.jpg&quot; alt=&quot;Den Mitarbeiter nicht stören&quot; /&gt;</description>
+    </item>
+    <item>
+      <title>Google Blogs</title>
+      <link>https://projects.vladi.dev/de/articles/google-blogs.html</link>
+      <guid isPermaLink="true">https://projects.vladi.dev/de/articles/google-blogs.html</guid>
+      <pubDate>Sat, 14 Jun 2025 12:00:00 GMT</pubDate>
+      <dc:creator>Vladimir Dietrich</dc:creator>
+      <description>&lt;img src=&quot;https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/google-blogs-image-0.png&quot; alt=&quot;Google Blogs&quot; /&gt;</description>
+    </item>
+    <item>
+      <title>Entwicklung eines von Branchenexperten anerkannten Multi-Market-Finanzindikatorensystems</title>
+      <link>https://projects.vladi.dev/de/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html</link>
+      <guid isPermaLink="true">https://projects.vladi.dev/de/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html</guid>
+      <pubDate>Sat, 14 Feb 2009 12:00:00 GMT</pubDate>
+      <dc:creator>Vladimir Dietrich</dc:creator>
+      <description>&lt;img src=&quot;https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/development-of-a-multi-market-financial-indicator-system-recognized-by-industry-image-0.jpg&quot; alt=&quot;Entwicklung eines von Branchenexperten anerkannten Multi-Market-Finanzindikatorensystems&quot; /&gt;</description>
+    </item>
+    <item>
+      <title>Modernisierung und Effizienz beim Austausch von kriminellen Informationen zwischen der Bundesjustiz und der Bundespolizei</title>
+      <link>https://projects.vladi.dev/de/articles/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic.html</link>
+      <guid isPermaLink="true">https://projects.vladi.dev/de/articles/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic.html</guid>
+      <pubDate>Tue, 21 Aug 2007 12:00:00 GMT</pubDate>
+      <dc:creator>Vladimir Dietrich</dc:creator>
+      <description>&lt;img src=&quot;https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic-image-0.png&quot; alt=&quot;Modernisierung und Effizienz beim Austausch von kriminellen Informationen zwischen der Bundesjustiz und der Bundespolizei&quot; /&gt;</description>
+    </item>
+    <item>
+      <title>Richtlinien für die Nutzung und Vervielfältigung von Inhalten</title>
+      <link>https://projects.vladi.dev/de/articles/politica-de-uso-e-reproducao-de-conteudo.html</link>
+      <guid isPermaLink="true">https://projects.vladi.dev/de/articles/politica-de-uso-e-reproducao-de-conteudo.html</guid>
+      <pubDate>Mon, 01 Jan 1990 12:00:00 GMT</pubDate>
+      <dc:creator>Vladimir Dietrich</dc:creator>
+      <description>&lt;img src=&quot;https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/politica-de-uso-e-reproducao-image-0.jpg&quot; alt=&quot;Richtlinien für die Nutzung und Vervielfältigung von Inhalten&quot; /&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proyectos de Vladimir Dietrich</title>
+    <link>https://projects.vladi.dev/es/</link>
+    <description>Proyectos de Vladimir Dietrich - Vladimir Dietrich</description>
+    <language>es</language>
+    <lastBuildDate>Sat, 14 Feb 2026 02:54:01 GMT</lastBuildDate>
+    <atom:link href="https://projects.vladi.dev/es/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No molestar al empleado</title>
+      <link>https://projects.vladi.dev/es/articles/nao-incomode-o-funcionario.html</link>
+      <guid isPermaLink="true">https://projects.vladi.dev/es/articles/nao-incomode-o-funcionario.html</guid>
+      <pubDate>Tue, 08 Jul 2025 12:00:00 GMT</pubDate>
+      <dc:creator>Vladimir Dietrich</dc:creator>
+      <description>&lt;img src=&quot;https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/nao-incomode-o-funcionario-image-0.jpg&quot; alt=&quot;No molestar al empleado&quot; /&gt;</description>
+    </item>
+    <item>
+      <title>Google Blogs</title>
+      <link>https://projects.vladi.dev/es/articles/google-blogs.html</link>
+      <guid isPermaLink="true">https://projects.vladi.dev/es/articles/google-blogs.html</guid>
+      <pubDate>Sat, 14 Jun 2025 12:00:00 GMT</pubDate>
+      <dc:creator>Vladimir Dietrich</dc:creator>
+      <description>&lt;img src=&quot;https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/google-blogs-image-0.png&quot; alt=&quot;Google Blogs&quot; /&gt;</description>
+    </item>
+    <item>
+      <title>Desarrollo de un Sistema de Indicadores Financieros Multimercado Reconocido por Especialistas del Sector</title>
+      <link>https://projects.vladi.dev/es/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html</link>
+      <guid isPermaLink="true">https://projects.vladi.dev/es/articles/desenvolvimento-de-um-sistema-de-indicadores-financeiros-multimercado-reconhecid.html</guid>
+      <pubDate>Sat, 14 Feb 2009 12:00:00 GMT</pubDate>
+      <dc:creator>Vladimir Dietrich</dc:creator>
+      <description>&lt;img src=&quot;https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/development-of-a-multi-market-financial-indicator-system-recognized-by-industry-image-0.jpg&quot; alt=&quot;Desarrollo de un Sistema de Indicadores Financieros Multimercado Reconocido por Especialistas del Sector&quot; /&gt;</description>
+    </item>
+    <item>
+      <title>Modernización y Eficiencia en el Intercambio de Información Criminal entre la Justicia Federal y la Policía Federal</title>
+      <link>https://projects.vladi.dev/es/articles/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic.html</link>
+      <guid isPermaLink="true">https://projects.vladi.dev/es/articles/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic.html</guid>
+      <pubDate>Tue, 21 Aug 2007 12:00:00 GMT</pubDate>
+      <dc:creator>Vladimir Dietrich</dc:creator>
+      <description>&lt;img src=&quot;https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic-image-0.png&quot; alt=&quot;Modernización y Eficiencia en el Intercambio de Información Criminal entre la Justicia Federal y la Policía Federal&quot; /&gt;</description>
+    </item>
+    <item>
+      <title>Política de Uso y Reproducción de Contenido</title>
+      <link>https://projects.vladi.dev/es/articles/politica-de-uso-e-reproducao-de-conteudo.html</link>
+      <guid isPermaLink="true">https://projects.vladi.dev/es/articles/politica-de-uso-e-reproducao-de-conteudo.html</guid>
+      <pubDate>Mon, 01 Jan 1990 12:00:00 GMT</pubDate>
+      <dc:creator>Vladimir Dietrich</dc:creator>
+      <description>&lt;img src=&quot;https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/politica-de-uso-e-reproducao-image-0.jpg&quot; alt=&quot;Política de Uso y Reproducción de Contenido&quot; /&gt;</description>
+    </item>
+  </channel>
+</rss>
