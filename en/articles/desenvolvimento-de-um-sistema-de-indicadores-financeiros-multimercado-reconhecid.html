@@ -456,6 +456,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
           
           
           
+          
           <p> </p>
 <p></p>
 <p>Around 2008, Dr. Alexander Elder, a world-renowned trader, challenged the international investment community to adapt his New Highs-New Lows (NH-NL) indicator—an essential tool for assessing the health of the U.S. market—to non-American markets. This had never been done before and presented a significant technical challenge: creating a system to obtain, process, and calculate the indicator for entirely different financial ecosystems.</p>
@@ -466,6 +467,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <p>This project established a new and valuable tool for the international trading community and gained recognition and validation from the highest level of industry experts, who went on to consume the charts and establish analyses.</p>
 <figure><img src="https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/development-of-a-multi-market-financial-indicator-system-recognized-by-industry-image-2.png" alt="Example of expert analysis using one of the many NH-NL charts provided by Vladimir Dietrichkeit outside the U.S., based on the Australia chart (Elder &amp; Lovvorn, 2012, p. 57)." /><figcaption>Example of expert analysis using one of the many NH-NL charts provided by Vladimir Dietrichkeit outside the U.S., based on the Australia chart (Elder &amp; Lovvorn, 2012, p. 57).</figcaption></figure>
 <p>In this project, I became the first person to successfully develop and implement Dr. Alexander Elder's NH-NL indicator for markets outside the U.S.</p>
+        
         
         
         
@@ -505,19 +507,10 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         var WEBAPP_URL = 'null';
         fetch(WEBAPP_URL, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email, lang: lang, blogId: 'vladidevprojects' }),
-          mode: 'no-cors'
+          body: JSON.stringify({ email: email, lang: lang, blogId: 'vladidevprojects' })
         }).then(function(r) {
-          if (r.type === 'opaque') {
-            msg.textContent = "Successfully subscribed!";
-            msg.className = 'newsletter-message success';
-            document.getElementById('newsletter-email').value = '';
-          } else {
-            return r.json();
-          }
+          return r.json();
         }).then(function(data) {
-          if (!data) return;
           if (data.success) {
             msg.textContent = "Successfully subscribed!";
             msg.className = 'newsletter-message success';
@@ -530,9 +523,8 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
             msg.className = 'newsletter-message error';
           }
         }).catch(function() {
-          msg.textContent = "Successfully subscribed!";
-          msg.className = 'newsletter-message success';
-          document.getElementById('newsletter-email').value = '';
+          msg.textContent = "Subscription error. Please try again.";
+          msg.className = 'newsletter-message error';
         }).finally(function() {
           btn.disabled = false;
         });
