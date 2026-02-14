@@ -388,6 +388,30 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 }
 .newsletter-message.success { color: rgba(26, 137, 23, 1); }
 .newsletter-message.error { color: #d32f2f; }
+.newsletter-banner {
+  text-align: center;
+  padding: 14px 20px;
+  background: rgba(26, 137, 23, 0.06);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+}
+.newsletter-banner a {
+  color: rgba(26, 137, 23, 1);
+  text-decoration: none;
+  font-weight: 600;
+}
+.newsletter-banner a:hover { text-decoration: underline; }
+.rss-link {
+  color: rgba(117, 117, 117, 1);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s ease;
+}
+.rss-link:hover { color: rgba(41, 41, 41, 1); }
 
 </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Development of a Multi-Market Financial Indicator System Recognized by Industry Experts","author":{"@type":"Person","name":"Vladimir Dietrich"},"datePublished":"2009-02-14","image":"https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/development-of-a-multi-market-financial-indicator-system-recognized-by-industry-image-0.jpg","description":" "}</script>
@@ -403,6 +427,9 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
      <nav class="nav-links">
  
        <div class="language-flags"></div>
+       <a href="/en/feed.xml" class="rss-link" target="_blank" title="RSS Feed">
+         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+       </a>
        <a href="https://vladi.dev" target="_blank">Portfolio</a>
        </nav>
    </div>
@@ -428,6 +455,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         <div class="article-content">
           
           
+          
           <p> </p>
 <p></p>
 <p>Around 2008, Dr. Alexander Elder, a world-renowned trader, challenged the international investment community to adapt his New Highs-New Lows (NH-NL) indicator—an essential tool for assessing the health of the U.S. market—to non-American markets. This had never been done before and presented a significant technical challenge: creating a system to obtain, process, and calculate the indicator for entirely different financial ecosystems.</p>
@@ -438,6 +466,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <p>This project established a new and valuable tool for the international trading community and gained recognition and validation from the highest level of industry experts, who went on to consume the charts and establish analyses.</p>
 <figure><img src="https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/development-of-a-multi-market-financial-indicator-system-recognized-by-industry-image-2.png" alt="Example of expert analysis using one of the many NH-NL charts provided by Vladimir Dietrichkeit outside the U.S., based on the Australia chart (Elder &amp; Lovvorn, 2012, p. 57)." /><figcaption>Example of expert analysis using one of the many NH-NL charts provided by Vladimir Dietrichkeit outside the U.S., based on the Australia chart (Elder &amp; Lovvorn, 2012, p. 57).</figcaption></figure>
 <p>In this project, I became the first person to successfully develop and implement Dr. Alexander Elder's NH-NL indicator for markets outside the U.S.</p>
+        
         
         
         </div>
