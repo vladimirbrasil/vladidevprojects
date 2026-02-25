@@ -507,6 +507,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
           
           
           
+          
           <p> </p>
 <p></p>
 <p>Imagina un Google Doc. Listo: tenemos otra entrada para un blog. ¡"Google Blogs"!</p>
@@ -545,6 +546,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <p>---</p>
 <p>Obs.: ¿notaron que aproveché la misma tecnología para mis proyectos? Ellos también usan la misma herramienta que crea blogs. Así, la publicación sobre este proyecto tampoco pasa de un Google Blog: un Google Doc más el poder del Javascript en el servidor. </p>
 <figure><img src="https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/google-blogs-image-3.jpg" alt="Google Doc that generated the post about this project (my native language is Portuguese, so the text in the image is in Portuguese)" /><figcaption>Google Doc that generated the post about this project (my native language is Portuguese, so the text in the image is in Portuguese)</figcaption></figure>
+        
         
         
         
@@ -786,18 +788,42 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         var lang = document.getElementById('newsletter-lang').value;
         var btn = document.getElementById('newsletter-btn');
         var msg = document.getElementById('newsletter-message');
+        
         if (!email) return;
+        
         btn.disabled = true;
-        msg.textContent = '';
+        msg.textContent = 'Inscrevendo...';
         msg.className = 'newsletter-message';
-        var WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzhe08vhP5f-yqYmQ87mS7pN1c35usLNSw8782VRESX/dev';
+        
+        var WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbw7HH9_Vigtgfp8dW5RNh0oFkq46T9ZHtBGhZ_sT_tPBXpMtkPbwMUxx2TXYnWJRgx9sA/exec';
+        
+        if (!WEBAPP_URL || WEBAPP_URL === 'undefined') {
+          msg.textContent = "Erro: WEBAPP_URL está vazia. Rode storeWebAppUrl() no painel.";
+          msg.className = 'newsletter-message error';
+          btn.disabled = false;
+          return;
+        }
+
         fetch(WEBAPP_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({ email: email, lang: lang, blogId: 'vladidevprojects' })
-        }).then(function(r) {
-          return r.json();
-        }).then(function(data) {
+        })
+        .then(function(r) {
+          // Lida com o erro se a resposta não for 200 OK (ex: erro de permissão ou CORS)
+          if (!r.ok) throw new Error('Falha na rede: Status ' + r.status);
+          return r.text(); // Pega como texto puro primeiro para podermos debugar
+        })
+        .then(function(text) {
+          console.log("Resposta do servidor:", text);
+          var data;
+          
+          try {
+             data = JSON.parse(text);
+          } catch(e) {
+             throw new Error('Servidor não retornou JSON válido. Resposta: ' + text.substring(0, 50) + '...');
+          }
+
           if (data.success) {
             msg.textContent = "¡Suscripción exitosa!";
             msg.className = 'newsletter-message success';
@@ -806,13 +832,17 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
             msg.textContent = "Este email ya está suscrito.";
             msg.className = 'newsletter-message error';
           } else {
-            msg.textContent = "Error al suscribirse. Inténtalo de nuevo.";
+            // Imprime na tela O MOTIVO exato retornado pelo backend
+            msg.textContent = "Erro do App Script: " + (data.error || "Erro desconhecido.");
             msg.className = 'newsletter-message error';
           }
-        }).catch(function() {
-          msg.textContent = "Error al suscribirse. Inténtalo de nuevo.";
+        })
+        .catch(function(err) {
+          msg.textContent = "Erro de conexão: " + err.message;
           msg.className = 'newsletter-message error';
-        }).finally(function() {
+          console.error("Erro completo:", err);
+        })
+        .finally(function() {
           btn.disabled = false;
         });
       }

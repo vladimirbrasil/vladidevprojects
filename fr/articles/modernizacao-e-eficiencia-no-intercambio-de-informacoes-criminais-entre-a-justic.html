@@ -507,6 +507,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
           
           
           
+          
           <p> </p>
 <p></p>
 <p>En 2006, j'ai identifié une inefficacité critique dans l'échange d'informations criminelles entre la Police fédérale et le système de Justice fédérale au Brésil. Auparavant, la communication dépendait de l'échange manuel et lent de documents officiels (lettres officielles). Ce processus entraînait des retards importants pour les magistrats qui avaient besoin d'antécédents criminels pour des décisions urgentes et conduisait à une faible qualité des données, car les informations judiciaires étaient souvent résumées de manière incorrecte ou perdues lors du transfert vers la base de données de la police, le Système national d'informations criminelles (SINIC).</p>
@@ -514,6 +515,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <p>L'initiative a permis de supprimer avec succès les goulets d'étranglement de l'information, d'améliorer considérablement la qualité et l'exhaustivité des données criminelles nationales et de permettre l'enregistrement des procédures pénales qui ne provenaient pas du système de police, comblant ainsi une lacune d'information importante.</p>
 <p>Le résultat du projet a été la conclusion d'un Accord de Coopération Technique en août 2007 entre la Cour Supérieure de Justice, le Conseil de la Justice Fédérale, les Tribunaux Régionaux Fédéraux et le Département de la Police Fédérale (disponible en <a href="https://www.cjf.jus.br/cjf/sessoes-do-cjf/acordos-e-convenios/2007/482_Acordo_Policia_Federal.pdf/at_download/file" target="_blank" rel="noopener noreferrer">téléchargement</a>). L'accord a officialisé l'échange électronique d'informations pour la prévention de la criminalité au Brésil, éliminant pour les parties intéressées la nécessité d'envoyer des lettres officielles pour la communication entre les deux organes sur les informations criminelles.</p>
 <figure><img src="https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic-image-1.jpg" alt="" /></figure>
+        
         
         
         
@@ -755,18 +757,42 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         var lang = document.getElementById('newsletter-lang').value;
         var btn = document.getElementById('newsletter-btn');
         var msg = document.getElementById('newsletter-message');
+        
         if (!email) return;
+        
         btn.disabled = true;
-        msg.textContent = '';
+        msg.textContent = 'Inscrevendo...';
         msg.className = 'newsletter-message';
-        var WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzhe08vhP5f-yqYmQ87mS7pN1c35usLNSw8782VRESX/dev';
+        
+        var WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbw7HH9_Vigtgfp8dW5RNh0oFkq46T9ZHtBGhZ_sT_tPBXpMtkPbwMUxx2TXYnWJRgx9sA/exec';
+        
+        if (!WEBAPP_URL || WEBAPP_URL === 'undefined') {
+          msg.textContent = "Erro: WEBAPP_URL está vazia. Rode storeWebAppUrl() no painel.";
+          msg.className = 'newsletter-message error';
+          btn.disabled = false;
+          return;
+        }
+
         fetch(WEBAPP_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({ email: email, lang: lang, blogId: 'vladidevprojects' })
-        }).then(function(r) {
-          return r.json();
-        }).then(function(data) {
+        })
+        .then(function(r) {
+          // Lida com o erro se a resposta não for 200 OK (ex: erro de permissão ou CORS)
+          if (!r.ok) throw new Error('Falha na rede: Status ' + r.status);
+          return r.text(); // Pega como texto puro primeiro para podermos debugar
+        })
+        .then(function(text) {
+          console.log("Resposta do servidor:", text);
+          var data;
+          
+          try {
+             data = JSON.parse(text);
+          } catch(e) {
+             throw new Error('Servidor não retornou JSON válido. Resposta: ' + text.substring(0, 50) + '...');
+          }
+
           if (data.success) {
             msg.textContent = "Abonnement réussi !";
             msg.className = 'newsletter-message success';
@@ -775,13 +801,17 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
             msg.textContent = "Cet email est déjà abonné.";
             msg.className = 'newsletter-message error';
           } else {
-            msg.textContent = "Erreur lors de l'abonnement. Réessayez.";
+            // Imprime na tela O MOTIVO exato retornado pelo backend
+            msg.textContent = "Erro do App Script: " + (data.error || "Erro desconhecido.");
             msg.className = 'newsletter-message error';
           }
-        }).catch(function() {
-          msg.textContent = "Erreur lors de l'abonnement. Réessayez.";
+        })
+        .catch(function(err) {
+          msg.textContent = "Erro de conexão: " + err.message;
           msg.className = 'newsletter-message error';
-        }).finally(function() {
+          console.error("Erro completo:", err);
+        })
+        .finally(function() {
           btn.disabled = false;
         });
       }

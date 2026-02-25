@@ -507,6 +507,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
           
           
           
+          
           <p> </p>
 <p></p>
 <p>In 2006, I identified a critical inefficiency in the exchange of criminal information between the Federal Police and the Federal Justice system in Brazil. Previously, communication depended on the manual and slow exchange of official documents (letters). This process resulted in significant delays for magistrates who needed criminal records for urgent decisions and led to low data quality, as judicial information was often incorrectly summarized or lost during transfer to the police database, the National Criminal Information System (SINIC).</p>
@@ -514,6 +515,7 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
 <p>The initiative successfully eliminated information bottlenecks, dramatically improved the quality and completeness of national criminal data, and enabled the recording of criminal proceedings that did not originate in the police system, closing a significant information gap.</p>
 <p>The result of the project was the celebration of a Technical Cooperation Agreement in August 2007 between the Superior Court of Justice, the Federal Justice Council, the Federal Regional Courts, and the Federal Police Department (available for <a href="https://www.cjf.jus.br/cjf/sessoes-do-cjf/acordos-e-convenios/2007/482_Acordo_Policia_Federal.pdf/at_download/file" target="_blank" rel="noopener noreferrer">download</a>). The agreement formalized the electronic exchange of information for the prevention of crime in Brazil, eliminating the need for interested parties to send letters for communication between the two bodies regarding criminal information.</p>
 <figure><img src="https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/modernizacao-e-eficiencia-no-intercambio-de-informacoes-criminais-entre-a-justic-image-1.jpg" alt="" /></figure>
+        
         
         
         
@@ -755,18 +757,42 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
         var lang = document.getElementById('newsletter-lang').value;
         var btn = document.getElementById('newsletter-btn');
         var msg = document.getElementById('newsletter-message');
+        
         if (!email) return;
+        
         btn.disabled = true;
-        msg.textContent = '';
+        msg.textContent = 'Inscrevendo...';
         msg.className = 'newsletter-message';
-        var WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzhe08vhP5f-yqYmQ87mS7pN1c35usLNSw8782VRESX/dev';
+        
+        var WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbw7HH9_Vigtgfp8dW5RNh0oFkq46T9ZHtBGhZ_sT_tPBXpMtkPbwMUxx2TXYnWJRgx9sA/exec';
+        
+        if (!WEBAPP_URL || WEBAPP_URL === 'undefined') {
+          msg.textContent = "Erro: WEBAPP_URL está vazia. Rode storeWebAppUrl() no painel.";
+          msg.className = 'newsletter-message error';
+          btn.disabled = false;
+          return;
+        }
+
         fetch(WEBAPP_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({ email: email, lang: lang, blogId: 'vladidevprojects' })
-        }).then(function(r) {
-          return r.json();
-        }).then(function(data) {
+        })
+        .then(function(r) {
+          // Lida com o erro se a resposta não for 200 OK (ex: erro de permissão ou CORS)
+          if (!r.ok) throw new Error('Falha na rede: Status ' + r.status);
+          return r.text(); // Pega como texto puro primeiro para podermos debugar
+        })
+        .then(function(text) {
+          console.log("Resposta do servidor:", text);
+          var data;
+          
+          try {
+             data = JSON.parse(text);
+          } catch(e) {
+             throw new Error('Servidor não retornou JSON válido. Resposta: ' + text.substring(0, 50) + '...');
+          }
+
           if (data.success) {
             msg.textContent = "Successfully subscribed!";
             msg.className = 'newsletter-message success';
@@ -775,13 +801,17 @@ body { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
             msg.textContent = "This email is already subscribed.";
             msg.className = 'newsletter-message error';
           } else {
-            msg.textContent = "Subscription error. Please try again.";
+            // Imprime na tela O MOTIVO exato retornado pelo backend
+            msg.textContent = "Erro do App Script: " + (data.error || "Erro desconhecido.");
             msg.className = 'newsletter-message error';
           }
-        }).catch(function() {
-          msg.textContent = "Subscription error. Please try again.";
+        })
+        .catch(function(err) {
+          msg.textContent = "Erro de conexão: " + err.message;
           msg.className = 'newsletter-message error';
-        }).finally(function() {
+          console.error("Erro completo:", err);
+        })
+        .finally(function() {
           btn.disabled = false;
         });
       }
