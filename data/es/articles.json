@@ -1,19 +1,13 @@
 {
   "articles": [
     {
-      "id": "nao-incomode-o-funcionario",
-      "title": "No molestar al empleado",
+      "id": "o-que-uma-equipe-forense-me-ensinou-sobre-rendimento",
+      "title": "¿Qué me enseñó un equipo forense sobre el rendimiento?",
       "author": "Vladimir Dietrich",
-      "date": "2025-07-08",
-      "readingTime": 4,
-      "heroImage": {
-        "fileName": "nao-incomode-o-funcionario-image-0.jpg",
-        "githubPath": "images/nao-incomode-o-funcionario-image-0.jpg",
-        "githubUrl": "https://raw.githubusercontent.com/vladimirbrasil/vladidevprojects/main/images/nao-incomode-o-funcionario-image-0.jpg",
-        "altText": "",
-        "caption": ""
-      },
-      "lastUpdated": "2025-09-04T20:00:38.149Z"
+      "date": "2026-09-22",
+      "readingTime": 3,
+      "heroImage": null,
+      "lastUpdated": "2026-09-23T07:38:25.698Z"
     },
     {
       "id": "google-blogs",
@@ -76,5 +70,5 @@
       "lastUpdated": "2025-09-04T19:59:05.936Z"
     }
   ],
-  "lastUpdated": "2026-09-22T07:38:29.851Z"
+  "lastUpdated": "2026-09-23T07:39:35.996Z"
 }
